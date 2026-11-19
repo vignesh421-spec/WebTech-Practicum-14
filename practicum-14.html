@@ -1,0 +1,191 @@
+HTML: 
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>StyleNest - Quiz Application</title> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="practicum-14.js" defer></script>
+    
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        } 
+ 
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f8f5f2; 
+        } 
+ 
+        header { 
+            background: #222; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+        } 
+ 
+        header h1 { 
+            color: #f4b183; 
+        } 
+ 
+        nav { 
+            background: #333; 
+        } 
+ 
+        nav ul { 
+            display: flex; 
+            justify-content: center; 
+            list-style: none; 
+        } 
+ 
+        nav a { 
+            display: block; 
+            color: white; 
+            padding: 15px 25px; 
+            text-decoration: none; 
+        } 
+ 
+        nav a:hover { 
+            background: #f4b183; 
+            color: black; 
+        } 
+ 
+        .container { 
+            max-width: 550px; 
+            margin: 30px auto; 
+            padding: 25px; 
+            background: white; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 8px #ccc; 
+        } 
+ 
+        h2 { 
+            text-align: center; 
+            margin-bottom: 20px; 
+            color: #333; 
+        } 
+ 
+        #question { 
+            background: #f8f5f2; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+            font-size: 18px; 
+            font-weight: bold; 
+        } 
+ 
+        .option { 
+            display: block; 
+            background: #eee; 
+            padding: 12px; 
+            margin: 10px 0; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        } 
+ 
+        .option:hover { 
+            background: #f4b183; 
+        } 
+ 
+        .option input { 
+            margin-right: 10px; 
+        } 
+ 
+        button { 
+            background: #333; 
+            color: white; 
+            padding: 12px 20px; 
+            border: none; 
+            margin-top: 20px; 
+            cursor: pointer; 
+            border-radius: 5px; 
+        } 
+ 
+        button:hover { 
+            background: #f4b183; 
+            color: black; 
+        } 
+ 
+        #nextBtn { 
+            width: 100%; 
+        } 
+ 
+        #result { 
+            margin-top: 20px; 
+            text-align: center; 
+            font-weight: bold; 
+            font-size: 18px; 
+        } 
+ 
+        #progress { 
+            text-align: center; 
+            margin-bottom: 15px; 
+            color: #555; 
+        } 
+ 
+        footer { 
+            background: #222; 
+            color: white; 
+            text-align: center; 
+            padding: 15px; 
+            margin-top: 30px; 
+        } 
+ 
+        @media(max-width: 600px) { 
+            nav ul { 
+                flex-direction: column; 
+                text-align: center; 
+            } 
+ 
+            .container { 
+                margin: 20px; 
+                padding: 15px; 
+            } 
+        } 
+    </style> 
+    <script src="script.js"></script> 
+</head> 
+ 
+<body> 
+     
+    <header> 
+        <h1>StyleNest</h1> 
+        <p>Your Style, Your Choice</p> 
+    </header> 
+ 
+    <nav> 
+        <ul> 
+            <li><a href="#">Home</a></li> 
+            <li><a href="#">Men</a></li> 
+            <li><a href="#">Women</a></li> 
+            <li><a href="#">Offers</a></li> 
+            <li><a href="#">Contact</a></li> 
+        </ul> 
+    </nav> 
+ 
+    <div class="container"> 
+ 
+        <h2>StyleNest Quiz</h2> 
+ 
+        <p id="progress"></p> 
+ 
+        <div id="question"></div> 
+ 
+        <div id="options"></div> 
+ 
+        <button id="nextBtn" onclick="nextQuestion()"> 
+            Next 
+        </button> 
+ 
+        <p id="result"></p> 
+ 
+    </div> 
+ 
+    <footer> 
+        <p>© 2026 StyleNest | Fashion for Everyone</p> 
+    </footer> 
+</body> 
+</html> 
